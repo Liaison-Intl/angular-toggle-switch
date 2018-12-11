@@ -12,7 +12,7 @@ angular.module('toggle-switch', ['ng']).directive('toggleSwitch', ['$compile', f
 			onChange: '&'
 		},
 		template:
-					'<div class="ats-switch" ng-click="toggle()" ng-keypress="onKeyPress($event)" ng-class="{ \'disabled\': isDisabled }" role="switch" aria-checked="{{!!model}}">' +
+					'<div class="ats-switch" ng-click="toggle()" ng-keypress="onKeyPress($event)" ng-class="{ \'disabled\': isDisabled }" aria-checked="{{!!model}}">' +
 						'<div class="switch-animate" ng-class="{\'switch-off\': !model, \'switch-on\': model}">' +
 							'<span class="switch-left"></span>' +
 							'<span class="knob"></span>' +
@@ -47,7 +47,7 @@ angular.module('toggle-switch', ['ng']).directive('toggleSwitch', ['$compile', f
 						scope.model = !scope.model;
 						ngModel.$setViewValue(scope.model);
 						scope.onChange();
-					}					
+					}
 				};
 
 				var spaceCharCode = 32;
