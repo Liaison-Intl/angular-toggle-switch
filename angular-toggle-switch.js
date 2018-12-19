@@ -13,7 +13,7 @@ angular.module('toggle-switch', ['ng']).directive('toggleSwitch', ['$compile', f
 		},
 		template:
 					'<div class="ats-switch" ng-click="toggle()" ng-keypress="onKeyPress($event)" ng-class="{ \'disabled\': isDisabled }" aria-checked="{{!!model}}">' +
-						'<div class="switch-animate" ng-class="{\'switch-off\': !model, \'switch-on\': model}">' +
+						'<div class="switch-animate" ng-class="{\'switch-off\': !model, \'switch-on\': model}" role="checkbox">' +
 							'<span class="switch-left"></span>' +
 							'<span class="knob"></span>' +
 							'<span class="switch-right"></span>' +
